@@ -3,7 +3,7 @@
 ## Task
 
 1. Create an input field for entering the full name of a person. The background of the control should be one of the three colors:
-    * white, if the user hasn’t yet once focused on the field or the field is currently in focus (the user hasn’t finished typing);
+    * white, if the user hasn’t yet focused the field or the field is currently in the focus (the user hasn’t finished typing);
     * green if the field is not currently in focus and the name provided by the user consists of exactly 2 or 3 words (after trimming);
     * red otherwise (indicating incorrect input).
 2. Create an input field for phone numbers. The background of the field must also be either white, green, or red, guided by the rules described above. The only correct input in this case is valid Ukrainian phone numbers including an area code (a few valid examples: `+380123456789`, `012 345-67-89`, `380 345-6789`, etc.). You can use regular expressions to simplify validation.
