@@ -1,6 +1,14 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   margin: 0;
@@ -8,28 +16,43 @@ body {
 }
 
 .feedback-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 50%;
   margin: 0 auto;
   border: 1px solid black;
   padding: 10px;
-  background: $c-gray;
+  background: #eee;
   margin-top: 100px;
 }
 
 .feedback-form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 50px;
   margin-bottom: 20px;
 }
 
 .feedback-form__label_anon,
 .feedback-form__label_submit {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .feedback-form__input {
@@ -73,5 +96,8 @@ body {
 }
 
 .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+/*# sourceMappingURL=main.css.map */

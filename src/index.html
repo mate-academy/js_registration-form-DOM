@@ -2,12 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Feedback-form</title>
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <img src="./images/logo.svg" alt="Logo">
-    <h1>Hello Mate Academy</h1>
+    <form class="feedback-form" id="feedback-form" method="POST" action="#">
+      <label class="feedback-form__label feedback-form__label_name" id="label-name">
+        <span>Please, enter your full name:</span>
+        <input type="text" class="feedback-form__input feedback-form__input_name" id="input-name" name="customer name">
+      </label>
+      <label class="feedback-form__label feedback-form__label_phone" id="label-phone">
+        <span>Please, enter your phone number:</span>
+        <input type="tel" class="feedback-form__input feedback-form__input_phone" id="input-phone" name="customer phone">
+      </label>
+      <label class="feedback-form__label feedback-form__label_region" id="label-region">
+        <span>Where Ukraine region are you from?</span>
+        <select class ="feedback-form__input feedback-form__input_region" id="input-region" name ="customer region">
+          <option value="Empty">I do not want to indicate my region</option>
+          <option value="Kyiv" selected="selected">Kyiv</option>
+          <option value="Center">Center (Cherkasy, Dnipro, Kropyvnytskyi, Poltava, Vinnytsia, Zhytomyr)</option>
+          <option value="North">North (Chernihiv, Sumy)</option>
+          <option value="East">East (Donetsk, Kharkiv, Luhansk)</option>
+          <option value="South">South (Kherson, Mykolaiv, Odesa, Zaporizhzhia)</option>
+          <option value="West">West (Chernivtsi, Ivano-Frankivsk, Khmelnytskyi, Lutsk, Lviv, Rivne, Ternopil, Uzhhorod)</option>
+        </select>
+      </label>
+      <label class="feedback-form__label feedback-form__label_hometown hide" id="label-hometown">
+        <span>What is your hometown?</span>
+        <select class ="feedback-form__input feedback-form__input_hometown" id="input-hometown" name="customer hometown">
+          <option value="Empty">I do not want to indicate my hometown</option>
+        </select>
+      </label>
+      <label class="feedback-form__label feedback-form__label_anon" id="label-anon">
+        <span>I would prefer not to specify my phone number and home town</span>
+        <input type="checkbox" class="feedback-form__input feedback-form__input_anon" value="yeah" id="input-anon">
+      </label>
+      <label class="feedback-form__label feedback-form__label_submit" id="label-submit">
+        <span>Send:</span>
+        <input type="submit" class="feedback-form__input feedback-form__input_submit" id="input-submit">
+      </label>
+    </form>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
