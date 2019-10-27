@@ -55,8 +55,10 @@ region.addEventListener('change', function() {
     return ;
   }
 
-  let townsArr = region.options[region.selectedIndex].text.match(/[A-Z][a-z]{1,}/g, );
+  let townsArr = [];
+  townsArr = region.options[region.selectedIndex].text.match(/[A-Z][a-z]{1,}/g, );
   townsArr.shift();
+  hometown.options.length = 1;
 
   townsArr.forEach(function(town) {
     let opt = document.createElement('option');
@@ -97,6 +99,7 @@ form.addEventListener('submit', function(event) {
     name.classList.add('incorrect');
     return ;
     } else {
+      name.classList.add('correct');
       data[name.name] = name.value;
       console.log(data);
       return data;
@@ -104,13 +107,17 @@ form.addEventListener('submit', function(event) {
   } else {
     if (name.classList.contains('incorrect') || !name.value) {
       name.classList.add('incorrect');
-      return ;
     }
     if (phone.classList.contains('incorrect') || !phone.value) {
       phone.classList.add('incorrect');
       return ;
     }
+    if (name.classList.contains('incorrect') || !name.value) {
+      return ;
+    }
 
+    name.classList.add('correct');
+    phone.classList.add('correct');
     data[name.name] = name.value;
     data[phone.name] = phone.value;
 
@@ -120,7 +127,7 @@ form.addEventListener('submit', function(event) {
     } else {
       data[region.name] = region.value;
 
-      if (hometown.selectedIndex === 0) {
+      if (hometown.selectedIndex === 0 || hometown.value === 'Empty') {
         console.log(data);
         return data;
       } else {
