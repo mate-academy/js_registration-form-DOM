@@ -49,10 +49,8 @@ const hometown = document.querySelector('#input-hometown');
 region.addEventListener('change', function() {
   if (region.selectedIndex > 1) {
     labelHometown.classList.remove('hide');
-    labelHometown.classList.add('show');
   }
-  if (region.selectedIndex < 1) {
-    labelHometown.classList.remove('show');
+  if (region.selectedIndex <= 1) {
     labelHometown.classList.add('hide');
     return ;
   }
@@ -77,9 +75,6 @@ const anon = document.querySelector('#input-anon');
 
 anon.addEventListener('change', function() {
   if(anon.checked) {
-    labelRegion.classList.remove('show');
-    labelHometown.classList.remove('show');
-    labelPhone.classList.remove('show');
     labelRegion.classList.add('hide');
     labelHometown.classList.add('hide');
     labelPhone.classList.add('hide');
@@ -88,16 +83,13 @@ anon.addEventListener('change', function() {
     labelRegion.classList.remove('hide');
     labelHometown.classList.remove('hide');
     labelPhone.classList.remove('hide');
-    labelRegion.classList.add('show');
-    labelHometown.classList.add('show');
-    labelPhone.classList.add('show');
   }
 })
 
 
-const submit = document.querySelector('#feedback-form');
+const form = document.querySelector('#feedback-form');
 
-submit.addEventListener('submit', function(event) {
+form.addEventListener('submit', function(event) {
   event.preventDefault();
 
   if (anon.checked) {

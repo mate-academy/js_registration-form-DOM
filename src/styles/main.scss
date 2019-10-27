@@ -32,6 +32,10 @@ body {
   align-items: center;
 }
 
+.feedback-form__label_submit {
+  width: 140px;
+}
+
 .feedback-form__input {
   height: 30px;
   border: 1px solid black;
@@ -48,8 +52,9 @@ body {
 
 .feedback-form__input_submit {
   border-radius: 5px;
-  background: blue;
+  background: #4870A3;
   color: white;
+  width: 140px;
 }
 
 .correct {
@@ -70,8 +75,4 @@ body {
 
 .hide {
   display: none;
-}
-
-.show {
-  display: flex;
 }
